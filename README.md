@@ -1,4 +1,4 @@
-Tetris
-######
+# Tetris
 
-Making Tetris in native JS and Canvas.
+### Making Tetris in native JS and Canvas.
+
