@@ -9,6 +9,8 @@ if (elem && elem.getContext) {
   var ctx = context;
   var x = elem.width;
   var y = elem.height;
+  var gridList = [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]];
+
   if (context) {
     var gridSize = (elem.width) / 10;
     var i, j;
@@ -26,5 +28,15 @@ if (elem && elem.getContext) {
       ctx.lineTo(x, j);
       ctx.stroke();
     }
+  buildGridList();
   }
+
+  function buildGridList() {
+    var i, j;
+    for (i = 0; i < x; i += gridSize) {
+      ctx.fillRect(i+gridSize/2.5, y/50, gridSize/5, gridSize/5)
+    }
+    ctx.fillRect(gridSize/2.5, gridSize/2.5, 5, 5)
+  } 
+
 }
